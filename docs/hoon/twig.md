@@ -45,9 +45,9 @@ provided to help with initial "ASCII overload", while runes are standard style.
 "sigil".)
 
 ```
-~zod:dojo> :cons(1 2)
+~your-urbit:dojo> :cons(1 2)
 [1 2]
-~zod:dojo> :-(1 2)
+~your-urbit:dojo> :-(1 2)
 [1 2]
 ```
 
@@ -110,11 +110,11 @@ The mold is `{$scon p/seed q/seed}`, and the expansion is simple and direct:
 > `:cons(q p)` or `:-(q p)`
 
 ```
-> :cons(1 2)
+~your-urbit:dojo> :cons(1 2)
 [1 2]
-> :scon(1 2)
+~your-urbit:dojo> :scon(1 2)
 [2 1]
-> :_(1 2)
+~your-urbit:dojo> :_(1 2)
 [2 1]
 ```
 
@@ -129,7 +129,7 @@ expressions. (We've already seen the `:dojo` print cells in its *irregular*
 form, `[]`.)
 
 ```
-> :*(1 2 3 4)
+~your-urbit:dojo> :*(1 2 3 4)
 [1 2 3 4]
 ```
 
@@ -197,14 +197,14 @@ To try it out, we'll need to create a list of some sort: this creates a list
 of atoms and stores it in a `:dojo` variable:
 
 ```
-> =p ^-((list @) [1 2 3 4 ~])
+~your-urbit:dojo> =p ^-((list @) [1 2 3 4 ~])
 ```
 
 Reformatting the macro from *tall* to *flat* form (see [syntax](#syntax)
 below) makes it easier to copy and evaluate:
 
 ```
-> |-(?~(p !! ?~(t.p i.p [i.p $(p t.p)])))
+~your-urbit:dojo> |-(?~(p !! ?~(t.p i.p [i.p $(p t.p)])))
 [1 2 3 4]
 ```
 
@@ -288,7 +288,7 @@ sub-twig separated by a single space.
 For example:
 
 ```
-> :-(%a %foobar)
+~your-urbit:dojo> :-(%a %foobar)
 [%a %foobar]
 ```
 
@@ -297,10 +297,10 @@ sub-twig must be separated by more-than-one space, allowing much greater
 flexibility:
 
 ```
-> :-  %a  %foobar
+~your-urbit:dojo> :-  %a  %foobar
 [%a %foobar]
-> :-  %a
-  %foobar
+~your-urbit:dojo> :-  %a
+                  %foobar
 [%a %foobar]
 ```
 
@@ -312,8 +312,8 @@ Tall form twigs can contain tall or flat forms, nested to any depth, while
 flat form twigs can only contain other flat forms.
 
 ```
-> :-  :cons(%a %b)
-  :scon(%foo %bar)
+~your-urbit:dojo> :-  :cons(%a %b)
+                  :scon(%foo %bar)
 [[%a %b] %bar %foo]
 ```
 
@@ -333,11 +333,11 @@ A close relative of `:cons` is
 is 3-fixed:
 
 ```
-> :cont(1 2 3)
+~your-urbit:dojo> :cont(1 2 3)
 [1 2 3]
-> :+  %a
-    %b
-  %c
+~your-urbit:dojo> :+  %a
+                    %b
+                  %c
 [%a %b %c]
 ```
 
@@ -347,11 +347,11 @@ In contrast, a twig with an arbitrary number of sub-twigs is said to be
 We've already seen `:conp` in flat form:
 
 ```
-> :conp  1
-         2
-         3
-         4
-  ==
+~your-urbit:dojo> :conp  1
+                         2
+                         3
+                         4
+                  ==
 [1 2 3 4]
 ```
 
@@ -372,8 +372,8 @@ is "1-fixed, then jogging".
 First, we need a noun to modify:
 
 ```
-> =a [p=1 q=2 r=3]
-> a
+~your-urbit:dojo> =a [p=1 q=2 r=3]
+~your-urbit:dojo> a
 [p=1 q=2 r=3]
 ```
 
@@ -381,9 +381,9 @@ Then, we produce a new noun by referencing the old, along with a list of
 changes to be made:
 
 ```
-> :make(a p 5)
+~your-urbit:dojo> :make(a p 5)
 [p=5 q=2 r=3]
-> %=(a p 5, q 4)
+~your-urbit:dojo> %=(a p 5, q 4)
 [p=5 q=4 r=3]
 ```
 
@@ -391,10 +391,10 @@ In tall form, it's a good practice to format the twig in a way that visually
 groups the paired sub-twigs:
 
 ```
-> %=  a
-    p  5
-    q  4
-  ==
+~your-urbit:dojo> %=  a
+                    p  5
+                    q  4
+                  ==
 [p=5 q=4 r=3]
 ```
 
@@ -416,7 +416,7 @@ We've already seen the irregular form of `:conp`: `[%foo %bar %baz]`.
 Reusing our last example:
 
 ```
-> a(p 5, q 4)
+~your-urbit:dojo> a(p 5, q 4)
 [p=5 q=4 r=3]
 ```
 
