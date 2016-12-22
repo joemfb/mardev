@@ -8,9 +8,8 @@ next: true
 ### How to read the twig docs
 
 A "twig" is just a Hoon expression. In a fundamental way, learning Hoon is
-learning the twigs -- there's over 100 of them! (The exact number depends on
-how you choose to count.) Most twigs consist of a *keyword* or *digraph rune*
-followed by a fixed structure of "sub-twigs".
+learning the twigs -- and there's over 100 of them! Most twigs consist of a
+*keyword* or *digraph rune* followed by a fixed structure of "sub-twigs".
 
 `twig` is also the name of the `mold` for the Hoon AST -- the data structure
 produced by the Hoon parser. Such ambiguity is a key Urbit aesthetic. While
@@ -18,7 +17,9 @@ the official [twig reference docs](https://urbit.org/docs/hoon/reference/)
 have a pretty consistent structure, they present a chicken-and-egg-type
 problem -- they are themselves difficult to understand without first
 understanding twigs generally. Learning the twigs by reading the reference
-docs can feel like an exercise in unwinding a Rube Goldberg machine.
+docs can feel like an exercise in unwinding a Rube Goldberg machine; you
+catch yourself saying "a `:cons` is just a `%cons` in the category of `$cons`",
+and *despair*.
 
 This document is intended to bridge that gap. We'll work through the standard
 sections in the official docs, using the simple twig
@@ -51,15 +52,18 @@ provided to help with initial "ASCII overload", while runes are standard style.
 [1 2]
 ```
 
-Runes have a distinct advantage over keywords: the first character represents
-a group of related twigs, establishing a class of sorts. All the runes starting
-with `:` construct cells.
-
 Prior to the introduction of keywords, rune
 [pronunciations](https://urbit.org/docs/hoon/syntax/#-glyphs-and-characters)
 were the only twig names: its much nicer to say "colhep" in place of "colon
 hyphen", and the distinction becomes more pronounced when you get to "question
 mark" or "ampersand". Now, twigs are most often referred to by their keyword.
+
+Runes have a distinct advantage over keywords: the first character represents
+a group of related twigs, establishing a class of sorts. For instance, all the
+runes starting with `:` construct cells.
+
+As we advance we'll use fewer keywords in the examples. They are training
+wheels, and we intend to fly.
 
 #### mold
 
@@ -84,7 +88,7 @@ In this case, `p` and `q` are *seeds*, meaning twigs that produce values.
 [`:cast` or `^-`](http://urbit.org/docs/hoon/twig/ket-cast/hep-cast/) for a
 twig with both).
 
-Molds will be explored in detail in the next section.
+Molds will be explored in detail in the [next section](/docs/hoon/mold).
 
 #### expansion
 
@@ -208,12 +212,19 @@ below) makes it easier to copy and evaluate:
 [1 2 3 4]
 ```
 
-This is a pretty trivial example, but we can so that it does exactly what it
-says on the can. In practice, this macro is evaluated against the AST of the
-arbitrary number of sub-twigs in a `:conp` expression.
+This is a pretty trivial transformation, but we can at least see that it does
+what it says on the can. In practice, this macro is evaluated against the AST
+of the arbitrary number of sub-twigs in a `:conp` expression.
 
-Hoon lists are used all over the place, so it's worth understanding them well.
-We'll examine them in detail later with other data structures.
+> Understanding the "Compiler macro" expansions will often require
+> intermediate-levels of familiarity with Hoon; they use a wide variety of
+> twigs and data-structures, and are implemented in a compact style without
+> much exposition. This example alone involves terminated vs non-terminated
+> tuples, lists, loops, recursion, pattern-matching, and so on.
+>
+> This document is intended to explain the structure and purpose of the
+> official docs, as much any specific example. As long as the context is clear,
+> rest assured that we will build up to these concepts and many more.
 
 #### produces
 
@@ -260,14 +271,15 @@ choice between sub-molds.
 
 > **Normalizes to**
 >
-> Default, if the sample is an atom; `p`, if the head of the sample
-> is an atom; `q` otherwise.
+> `p`, if the sample is an atom; `q` otherwise.
 >
 > **Defaults to**
 >
 > The default of `p`.
 
-Put more simply, `:claw` represents a choice between an atom or a cell.
+In other words, `:claw` represents a choice between an atom or a cell, and
+defaults (or "bunts") to an atom. We'll discuss these concepts in much more
+depth when we return to molds.
 
 #### syntax
 
@@ -435,7 +447,7 @@ the compiler implementation strategy. Don't worry if it's not clear initially
 And finally, all the twigs should have some `:dojo` examples, including tall
 and flat form with both runes and keywords, as well as irregular syntax
 where appropriate. Do try the examples; copy or re-type them into your `:dojo`.
-If they're unclear, broken, or incomplete, open an issue (better yet, a pull
+If they're unclear, broken, or incomplete, open an issue (or better yet, a pull
 request) on the [github docs repo](https://github.com/urbit/docs). This is an
 excellent way to start contributing to Urbit!
 
