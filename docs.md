@@ -5,6 +5,8 @@ title: the ~micnus-tarwyl-haltem-linhut--dilhul-talbes-wolnyx-lasbud docs
 
 ### the `~micnus-tarwyl-haltem-linhut--dilhul-talbes-wolnyx-lasbud` docs
 
+*by `~master-morzod`*
+
 The universe of Urbit is utterly foreign. Galactic identities abound. Layers
 of neologisms, runes, and lapidary conventions combine with disorienting
 effect, even to -- no, *especially to* the experienced programmer. There are
