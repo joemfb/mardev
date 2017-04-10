@@ -453,7 +453,7 @@ excellent way to start contributing to Urbit!
 
 ---
 
-And they're we have it. This should put you well on your way to an epiphany of
+And there we have it. This should put you well on your way to an epiphany of
 Hoonery.
 
 And yet, we glossed over molds. This must be rectified -- they are a unique
