@@ -1,17 +1,18 @@
 ---
 anchor: none
-title: the ~micnus-tarwyl-haltem-linhut--dilhul-talbes-wolnyx-lasbud docs
+title: the ~mardev docs
 ---
 
-### the `~micnus-tarwyl-haltem-linhut--dilhul-talbes-wolnyx-lasbud` docs
+### the `~mardev` docs
 
 *by `~master-morzod`*
 
 The universe of Urbit is utterly foreign. Galactic identities abound. Layers
 of neologisms, runes, and lapidary conventions combine with disorienting
 effect, even to -- no, *especially to* the experienced programmer. There are
-[many](posts) [resources](docs) to [study](whitepaper), and endless paths
-within. Most are necessary, none are themselves sufficient.
+[many](http://urbit.org/posts) [resources](http://urbit.org/docs) to
+[study](https://media.urbit.org/whitepaper.pdf), and endless paths within.
+Most are necessary, none are themselves sufficient.
 
 These docs are merely supplemental, harboring no dillusions of completeness or
 supercession. But there are benefits to re-explanation -- to different words.
@@ -21,8 +22,10 @@ features and capabilities, from simple scripts to full-blown apps. Arranged in
 ascending order of difficulty, these docs (*will* __*__) target the familiar,
 if not yet capable Urbit afficianado.
 
-> __*__ This is entirely a work-in-progress, subject to revision, replacement,
-> or outright disappearance.
+> __*__ This is entirely a work-in-progress -- subject to revision,
+> replacement, or outright disappearance.
+
+---
 
 By way of introduction:
 
@@ -34,5 +37,7 @@ Or, for those who prefer to dive deep without oxygen:
 
 - Curtis Yarvin's infamous LambdaConf talk ([official](https://www.youtube.com/watch?v=bTisf4oxIFo) and [bootleg](https://www.youtube.com/watch?v=rkZ3GkeU9kg) recordings)
 - the [Urbit whitepaper](https://media.urbit.org/whitepaper.pdf)
+
+---
 
 <list/>
