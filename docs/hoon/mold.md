@@ -20,7 +20,7 @@ The notion of "type" in a programming language is heavily contested and
 overloaded; nearly every language uses it to mean something at least somewhat different from the others. The inestimable Gary Bernhardt (of
 [*Destroy All Software*](https://www.destroyallsoftware.com/screencasts) fame)
 has written the best
-[summary of type systems](https://gist.github.com/garybernhardt/122909856b570c5c457a6cd674795a9c)
+[summary of type systems](https://www.destroyallsoftware.com/compendium/types?share_key=baf6b67369843fa2)
 that I've ever found.
 
 Hoon aims to make its type system as simple as possible, but no simpler: the
