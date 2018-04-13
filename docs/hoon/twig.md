@@ -34,6 +34,11 @@ You'll need an urbit instance, of course, to use `:dojo`, the urbit shell.
 the [urbytes](https://urbit.org/docs/byte/): bottom-up lessons that'll have
 you on your feet quickly.
 
+TODO: 10 second introduction to Hoon
+
+define noun
+all twigs produce a noun
+
 #### title
 
 Twig titles have three parts: keyword, rune, rune pronunciation:

@@ -484,6 +484,8 @@ between a cell with an atomic head and a cell with a cellular head.
 
 Let's reuse the trick of putting faces in our fork mold for clarity:
 
+TODO: this is broken
+
 ```
 > =foo $^(a/{^ ^} b/{@ *})
 > *foo
