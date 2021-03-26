@@ -546,7 +546,7 @@ reference to a face, and a `wing` is nesting of limbs.
 > =+(a=[b=1 c=2] a)
 [b=1 c=2]
 > =+(a=[b=1 c=2] b.a)
-2
+1
 ```
 
 #### abnormal molds
